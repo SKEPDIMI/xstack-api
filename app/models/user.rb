@@ -25,4 +25,7 @@ class User < ApplicationRecord
       self.description = sanitize self.description unless self.description.nil?
       self.url = sanitize self.url unless self.url.nil?
     end
+    def sanitize(n)
+      return Sanitize.fragment(n)
+    end
 end

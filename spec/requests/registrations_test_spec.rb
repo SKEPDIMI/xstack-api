@@ -70,7 +70,7 @@ describe 'POST /auth', type: :request do
       it 'should have an empty name' do
         body = JSON.parse(response.body)
         
-        expect(body['data']['name']).to be_nil
+        expect(body['data']['name']).to be_empty
       end
     end
     context 'nickname is provided' do
@@ -92,7 +92,7 @@ describe 'POST /auth', type: :request do
       it 'should have an empty name' do
         body = JSON.parse(response.body)
         
-        expect(body['data']['bio']).to be_nil
+        expect(body['data']['bio']).to be_empty
       end
     end
     context 'description is provided' do
@@ -103,7 +103,7 @@ describe 'POST /auth', type: :request do
       it 'should have an empty name' do
         body = JSON.parse(response.body)
         
-        expect(body['data']['description']).to be_nil
+        expect(body['data']['description']).to be_empty
       end
     end
     context 'url is provided' do
@@ -114,7 +114,7 @@ describe 'POST /auth', type: :request do
       it 'should have an empty name' do
         body = JSON.parse(response.body)
         
-        expect(body['data']['url']).to be_nil
+        expect(body['data']['url']).to be_empty
       end
     end
   end
